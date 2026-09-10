@@ -1,0 +1,12 @@
+# numpy<2 is deliberate: numpy 2.x against a torch built for 1.x breaks
+# torch.from_numpy inside the dataloader, which silently flags every patch
+# unreadable and writes a features file of zeros. preflight.py checks this.
+numpy>=1.24,<2
+torch>=2.0
+torchvision>=0.15
+timm>=1.0.3
+pillow>=9.0
+tqdm>=4.65
+scikit-learn>=1.3
+scipy>=1.10
+matplotlib>=3.7
